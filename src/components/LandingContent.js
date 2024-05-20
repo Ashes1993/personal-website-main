@@ -15,8 +15,11 @@ const LandingContent = () => {
         </div>
         <div className="about-text">
           <SlowText text={"Front-End Developer"} speed={120} />
-          <h1 className="name">Ashkan Eslamii</h1>
-          <p>Developing Responsive web pages using React library.</p>
+          <h1 className="name">Ashkan Eslami</h1>
+          <p>
+            Developing Responsive web pages using React library and other
+            related libraries.
+          </p>
           <button className="download-btn">
             <a href="https://drive.google.com/uc?export=download&id=1R602c8puPfGGRDcuJ1wEyrWFFQqdJqgI">
               Download CV
