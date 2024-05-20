@@ -1,33 +1,33 @@
-import React, { useState } from 'react'
-import { GiHamburgerMenu } from 'react-icons/gi'
-import { useGlobalContext } from '../context'
-import { Link } from 'react-router-dom'
-import { MobileNavbar } from './MobileNavbar'
+import React from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { useGlobalContext } from "../context";
+import { Link } from "react-router-dom";
+import { MobileNavbar } from "./MobileNavbar";
 
 const Navbar = () => {
-  const { isBurgerMenu, setIsBurgerMenu } = useGlobalContext()
+  const { isBurgerMenu, setIsBurgerMenu } = useGlobalContext();
   return (
     <>
-      <nav className='navbar'>
-        <Link to={'/'} className='header'>
+      <nav className="navbar">
+        <Link to={"/"} className="header">
           AE
         </Link>
-        <ul className='navbar-links'>
+        <ul className="navbar-links">
           <li>
-            <Link to={'/'}>Home</Link>
+            <Link to={"/"}>Home</Link>
           </li>
           <li>
-            <Link to={'/resume'}>Resume</Link>
+            <Link to={"/resume"}>Resume</Link>
           </li>
           <li>
-            <Link to={'/portfolio'}>Portfolio</Link>
+            <Link to={"/portfolio"}>Portfolio</Link>
           </li>
           <li>
-            <Link to={'/contact'}>Contact</Link>
+            <Link to={"/contact"}>Contact</Link>
           </li>
         </ul>
         <button
-          className='burger-menu'
+          className="burger-menu"
           onClick={() => setIsBurgerMenu(!isBurgerMenu)}
         >
           <GiHamburgerMenu />
@@ -35,6 +35,6 @@ const Navbar = () => {
       </nav>
       {isBurgerMenu && <MobileNavbar />}
     </>
-  )
-}
-export default Navbar
+  );
+};
+export default Navbar;
